@@ -1,0 +1,455 @@
+.res-header {
+    font-family: 'Open Sans', 'OpenSans', sans-serif;
+    width: 100%;
+    z-index: 101;
+    position: fixed;
+}
+
+.res-header img {
+    vertical-align: middle;
+}
+
+/* SUBHEADER */
+
+.minimalheader,
+.minimalheader-container .item,
+.minimalheader .ui.dropdown .menu>.item {
+    /* fonts are the same for everything in subheader */
+    font-family: 'Open Sans', 'OpenSans', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    color: #333;
+}
+.minimalheader-container {
+    width: 950px;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.minimalheader-drop {
+    float: left;
+    padding: 15px;
+    margin-bottom: -2px;
+}
+
+.minimalheader-container a.item {
+    outline: 0;
+    height: 50px;
+    box-sizing: border-box;
+}
+.minimalheader-container .item {
+    text-decoration: none;
+    float: left;
+    padding: 15px;
+    width: 16.4%;
+    margin-bottom: -2px;
+}
+
+.minimalheader {
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+}
+
+.minimalheader .item {
+    text-align: center;
+    border-right: 1px solid #dfdfdf;
+}
+
+.minimalheader .item:first-child {
+    border-left: 1px solid #dfdfdf;
+}
+
+.minimalheader .item.active {
+    background-image: linear-gradient(180deg, #f4f3ff, #f4f3ff);
+    border-bottom: 2px solid #5755a1;
+}
+
+.minimalheader .item:hover {
+    background-image: linear-gradient(180deg, #f4f3ff, #f4f3ff);
+    border-bottom: 2px solid #dfdfdf;
+}
+
+.minimalheader .ui.dropdown .menu>.item {
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+}
+
+.docs-main {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+    /* needs to change if header height changes */
+    /* (e.g. when the news section is added/removed/modified) */
+    /* value here should be the same as in the `.docs-nav` `top` rule */
+    /* this rule corresponds to style.css `main` `margin-top` rule */
+    margin-top: 158px;
+}
+
+.docs-main .docs-content {
+    top: 0;
+    position: absolute;
+    overflow-y: scroll;
+    bottom: 0;
+}
+.docs-nav-search {
+    width: 240px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #e6eaf1;
+}
+
+/* DOCS */
+
+@font-face {
+    font-family: 'fontello';
+    src: url('data:application/octet-stream;base64,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') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.docs-nav-search-clear {
+    left: 240px;
+}
+
+.docs-nav {
+    overflow-y: initial;
+    overflow-x: initial;
+    z-index: 1000;
+
+    /* needs to change if header height changes */
+    /* (e.g. when the news section is added/removed/modified) */
+    /* value here should be the same as in the `.docs-main` `margin-top` rule */
+    /* this rule corresponds to style.css `.sidebar-container` `top` rule */
+    top: 158px;
+
+    /* should reflect the `top` value */
+    height: calc(100% - 158px);
+}
+
+.docs-nav > .docs-nav-items > .docs-nav-item > .docs-nav-item-link:hover {
+    color: #31d0c6;
+    background-color: rgba(14, 20, 84, 0.15);
+}
+
+.docs-nav > .docs-nav-items {
+    padding-bottom: 29px; /* height of list item */
+}
+
+.docs-nav-items {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* height of search bar = 51px */
+    /* height of list bottom padding = 29px */
+    height: calc(100% - 80px);
+}
+
+@media screen and (max-width: 1240px) {
+    .docs-main .docs-content {
+        padding: 0 35px 15px 30px;
+    }
+    .docs-nav {
+        left: -286px;
+        transition: left 0.1s ease-out;
+    }
+    .docs-nav.open {
+        left: 0px;
+    }
+    .docs-nav:before {
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        background: #fff;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, .15);
+        width: 15px;
+        height: 48px;
+        position: absolute;
+        top: 45%;
+        cursor: pointer;
+        -webkit-border-top-right-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -moz-border-radius-topright: 4px;
+        -moz-border-radius-bottomright: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-left: none;
+        -webkit-box-shadow: 1px 0px 8px rgba(0, 0, 0, .175);
+        box-shadow: 1px 0px 8px rgba(0, 0, 0, .175);
+        right: -20px;
+        content: '\e801';
+        font-family: 'fontello';
+        line-height: 3;
+        padding: 0 2px;
+        color: #6A6C8A;
+    }
+    .docs-nav.open:before {
+        content: '\e800';
+        padding: 0 2px;
+    }
+}
+
+/* end DOCS */
+
+/*webflow header*/
+.w-col {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.w-col-9 {
+    width: 75%;
+}
+
+.w-col-3 {
+    width: 25%;
+}
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.w-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+}
+
+.w-container:after {
+    clear: both;
+}
+
+.w-clearfix:after {
+    clear: both;
+}
+
+.w-container:before, .w-container:after {
+    content: " ";
+    display: table;
+}
+
+.w-row:before, .w-row:after {
+    content: " ";
+    display: table;
+}
+.w-container .w-row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.w-nav:before, .w-nav:after {
+    content: " ";
+    display: table;
+}
+
+.header-section {
+    position: relative;
+    z-index: 1000;
+    display: block;
+    background-image: -webkit-linear-gradient(270deg, #5755a1, #5755a1);
+    background-image: linear-gradient(180deg, #5755a1, #5755a1);
+}
+
+.w-nav-link {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    padding: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav0link {
+    margin-right: 16px;
+    padding: 23px 0px 0px;
+    font-weight: normal;
+    font-family: 'Open Sans', 'OpenSans', sans-serif;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.nav0link.first {
+    padding-left: 18px;
+}
+
+.nav0link.nav-buy-cta {
+    line-height: 20px;
+    margin-top: 16px;
+    margin-left: 0;
+    padding: 4px 10px;
+    border: 2px solid #fe854f;
+    border-radius: 10px;
+}
+
+.nav0link.nav-trial-cta {
+    line-height: 20px;
+    margin-top: 16px;
+    margin-left: 0;
+    padding: 4px 10px;
+    border: 2px solid #31d0c6;
+    border-radius: 10px;
+}
+
+.nav0link:hover {
+    color: #c6c7e2;
+}
+
+.nav0link.nav-trial-cta:hover {
+    background-image: -webkit-linear-gradient(270deg, #31d0c6, #31d0c6);
+    background-image: linear-gradient(180deg, #31d0c6, #31d0c6);
+    color: #fff;
+}
+
+.nav0link.nav-buy-cta:hover {
+    background-image: -webkit-linear-gradient(270deg, #fe854f, #fe854f);
+    background-image: linear-gradient(180deg, #fe854f, #fe854f);
+    color: #fff;
+}
+
+.nav0link.w--current {
+    color: #31d0c6;
+}
+
+.header-nav-manu {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.res-header .ui.dropdown.dropdownburger a {
+    text-decoration: none;
+    color: #333;
+}
+
+.res-header .ui.dropdown.dropdownburger .ui.menu {
+    left: -115px
+}
+
+.res-header .ui.dropdown.dropdownburger .item:hover,
+.res-header .ui.dropdown.dropdownburger .item.active {
+    background-image: linear-gradient(180deg, #f4f3ff, #f4f3ff);
+}
+
+.res-header .ui.dropdown.dropdownburger {
+    color: #fff;
+    padding-top:15px;
+    padding-right:25px;
+    float: right;
+}
+
+.res-header .ui.dropdown.dropdownburger .buy-burger a {
+    color: #fe854f;
+}
+
+.res-header .ui.dropdown.dropdownburger .buy-burger:hover a {
+    color: #fff;
+}
+
+.res-header .ui.dropdown.dropdownburger .buy-burger:hover {
+    background: #fe854f none;
+}
+
+.res-header .ui.dropdown.dropdownburger .trial-burger a {
+    color: #31D0C6;
+}
+
+.res-header .ui.dropdown.dropdownburger .trial-burger:hover a {
+    color: #fff;
+}
+.res-header .ui.dropdown.dropdownburger .trial-burger:hover {
+    background: #31D0C6 none;
+}
+
+.res-header .mob-inline,
+.res-header .minimob  {
+    display: none !important;
+}
+
+.res-header .desktop {
+    display: inline-block !important;
+}
+
+.header-rappid-logo img {
+    max-width: 100%;
+}
+
+
+@media screen and (max-width: 968px) {
+
+    .res-header .desktop,
+    .res-header .minimob {
+        display: none !important;
+    }
+
+    .res-header .mob-inline {
+        display: inline-block !important;
+    }
+
+    .res-header {
+        position: relative;
+    }
+
+    .minimalheader .item {
+        border-right: none;
+    }
+    .minimalheader .item:first-child {
+        border-left: none;
+    }
+    .minimalheader .item:nth-child(2n) {
+        border-left: 1px solid #dfdfdf;;
+    }
+
+    .docs-main {
+        position: relative;
+        margin-top: 0;
+    }
+
+    .docs-main .docs-content {
+        position: relative;
+        overflow: auto;
+    }
+
+    .minimalheader-container {
+        width: 100%;
+        max-width: inherit;
+    }
+
+    .minimalheader-drop {
+        width: 100%;
+    }
+
+    .minimalheader-container .item {
+        width: 50%;
+        border-top: 1px solid #dfdfdf;
+    }
+    .w-col-3-mob {
+        width: 40% !important;
+    }
+    .w-col-8-mob {
+        width: 60% !important;
+    }
+}
+
+@media screen and (max-width: 530px) {
+
+    .res-header .mob-inline,
+    .res-header .desktop {
+        display: none !important;
+    }
+
+    .res-header .minimob {
+        display: inherit !important;
+    }
+
+    .w-col-6-minimob {
+        width: 50% !important;
+    }
+}
+

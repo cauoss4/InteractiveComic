@@ -1,75 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rappid Demo Application</title>
+    <link rel="stylesheet" type="text/css" href="build/package/rappid.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/theme-picker.css">
 
-    <title>Bootstrap 4, from LayoutIt!</title>
-
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-	<style>
-		form{position:relative;}
-		.upload{background:#000;color:#fff;width:100px;height:30px;line-height:30px;text-align:center;cursor:pointer;}
-		input{position:absolute;top:0;left:0;height:30px;width:100px;opacity:0;filter:alpha(opacity=0);cursor:pointer;}
-		img{
-			width: 300px;
-			height: 300px;
-		}
-	  </style>
+    <!-- theme-specific application CSS  -->
+    <link rel="stylesheet" type="text/css" href="css/style.dark.css">
+    <link rel="stylesheet" type="text/css" href="css/style.material.css">
+    <link rel="stylesheet" type="text/css" href="css/style.modern.css">
+    <style>
+      
+      
+    
+      </style>
   </head>
   <body>
+     
+  
 
-   <!-- <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-2">
-			 
-			<button type="button" class="btn btn-success">
-				imageload
-			</button>
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-		-->
-		
-		<body>
-	
-			<form enctype="multipart/form-data" name="form1" id="form0">
-				<input id="f" type="file"  onchange="change()" multiple/>
-				<div class="upload">upload</div>
-				<p>post:</p>
-				
-				<!-- <p id="preview"></p> -->
-			</form>
-		<textarea id="code-html" name="code-html" cols="" rows="" style="margin: 0px; width: 1200px; height: 974px;"></textarea>
-		<div class="col-md-8">
-			
-		</div>
-		<div class="col-md-2">
-			 
-			<button type="button" class="btn btn-success btn-block btn-sm">
-				save
-			</button> 
-			<button type="button" class="btn btn-success btn-block btn-sm">
-				output
-			</button>
-		</div>
-	</div>
-</div>
+    <div id="app">
+      <div class="app-header">
+            <div class="app-title">
+                <h1>Rappid</h1>
+
+            </div>
+            <div class="toolbar-container"></div>
+            <div class="form"></div>
+      </div>
+      <div class="app-body">
+            <div class="stencil-container"></div>
+            <div class="paper-container"></div>
+            <div class="inspector-container"></div>
+            <div class="navigator-container"></div>
+      </div>
+      <form enctype="multipart/form-data" name="form1" id="form0">
+        <input id="f" type="file"  onchange="change()" multiple/>
+        <div class="upload">upload</div>
+        <p>post:</p>
+        
+      </form>
+  </div>
+
+    <!-- Rappid/JointJS dependencies: -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/lodash/lodash.js"></script>
+    <script src="node_modules/backbone/backbone.js"></script>
+    <script src="node_modules/graphlib/dist/graphlib.core.js"></script>
+    <script src="node_modules/dagre/dist/dagre.core.js"></script>
+
+    <script src="build/package/rappid.js"></script>
+    <!-- Application files:  -->
+    <script src="js/config/halo.js"></script>
+    <script src="js/config/selection.js"></script>
+    <script src="js/config/inspector.js"></script>
+    <script src="js/config/stencil.js"></script>
+    <script src="js/config/toolbar.js"></script>
+    <script src="js/config/sample-graphs.js"></script>
+    <script src="js/views/main.js"></script>
+    <script src="js/views/theme-picker.js"></script>
+    <script src="js/models/joint.shapes.app.js"></script>
+    <script src="js/views/navigator.js"></script>
+   
+    <script>
+      joint.setTheme('modern');
+      app = new App.MainView({ el: '#app' });
+      themePicker = new App.ThemePicker({ mainView: app });
+      themePicker.render().$el.appendTo(document.body);
+      window.addEventListener('load', function() {
+          app.graph.fromJSON(JSON.parse(App.config.sampleGraphs.emergencyProcedure));
+      });
+  </script>
+   
+
+   <div class="joint-toolbar joint-theme-picker joint-theme-modern">
+     <div class="joint-toolbar-group joint-theme-modern" data-group="default">
+       <div class="joint-widget joint-theme-modern" data-type="selectButtonGroup" data-name="theme-picker">
+         <div class="joint-select-button-group joint-theme-modern" data-tooltip="Change Theme" data-tooltip-position="bottom">
+           <div class="select-button-group-button selected">Modern</div>
+           <div class="select-button-group-button">Dark</div>
+           <div class="select-button-group-button">Material</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+ <script>
+      (function() {
+          var fs = (document.location.protocol === 'file:');
+          var ff = (navigator.userAgent.toLowerCase().indexOf('firefox') !== -1);
+          if (fs && !ff) {
+             (new joint.ui.Dialog({
+                 width: 300,
+                 type: 'alert',
+                 title: 'Local File',
+                 content: $('#message-fs').show()
+              })).open();
+          }
+      })();
+  </script>
+   
+  
+
+
+</body>
+</html>
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <script src="index.js"></script>
+    <form enctype="multipart/form-data" name="form1" id="form0">
+      <input id="f" type="file"  onchange="change()" multiple/>
+      <div class="upload">upload</div>
+      <p>post:</p>
+      
+      <!-- <p id="preview"></p> -->
+    </form>
+  
+  
+  
     <script src="placeImage.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+    
+  
+     </div>
+     </body>
 </html>
