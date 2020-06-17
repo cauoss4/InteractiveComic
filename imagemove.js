@@ -66,7 +66,7 @@ function moveClick()
   img_y = parseInt(img.style.top.replace('px',''));;
   xt = -(center_x - event.clientX);
   yt = -(center_y - event.clientY);
-  alert(`clicked 좌표 X: ${xt} Y: ${yt}`);
+  //alert(`clicked 좌표 X: ${xt} Y: ${yt}`);
 
   var b=false;
   var move;
@@ -93,7 +93,7 @@ function moveClick()
       yt = move.getCenterY() + y;
       x-=xt;
       y-=yt;
-      alert(`이미지 좌표 X: ${x} Y: ${y}`);
+      //alert(`이미지 좌표 X: ${x} Y: ${y}`);
       img.style.left = (img_x - xt) + `px`;
       img.style.top = (img_y - yt) + `px`;
       currentPicture = move;
