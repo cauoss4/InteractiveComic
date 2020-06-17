@@ -58,7 +58,7 @@ InteractiveComic
 index.html
 <p align="center">
   <a href="https://github.com/cauoss4/interactiveComic/">
-    <img src="demo.jpg" alt="Logo" width="1919" height="954">
+    <img src="demo.jpg" alt="Logo" width="919" height="454">
   </a>
 
 
