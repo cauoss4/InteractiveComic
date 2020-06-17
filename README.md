@@ -1,4 +1,4 @@
-# ProjectName
+# InteractiveComic
 
 InteractiveComic
 
