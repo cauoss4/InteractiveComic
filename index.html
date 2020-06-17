@@ -12,17 +12,18 @@
     <link rel="stylesheet" type="text/css" href="css/style.material.css">
     <link rel="stylesheet" type="text/css" href="css/style.modern.css">
     <style>
-      
+  
+      form{position:relative;}
+		.upload{background:#000;color:#fff;width:100px;height:30px;line-height:30px;text-align:center;cursor:pointer;}
+		input{position:absolute;top:0;left:0;height:30px;width:100px;opacity:0;filter:alpha(opacity=0);cursor:pointer;}
+		img{
+			width: 300px;
+			height: 300px;
+		}
+    
       
     
       </style>
-
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-
   </head>
   <body>
      
@@ -42,15 +43,16 @@
             <div class="paper-container"></div>
             <div class="inspector-container"></div>
             <div class="navigator-container"></div>
+            <form enctype="multipart/form-data" name="form1" id="form0">
+              <input id="f" type="file"  onchange="change()" multiple/>
+              <div class="upload">upload</div>
       </div>
-      <form enctype="multipart/form-data" name="form1" id="form0">
-        <input id="f" type="file"  onchange="change()" multiple/>
-        <div class="upload">upload</div>
-        <p>post:</p>
-        
-      </form>
+     
   </div>
-
+  
+    
+    
+  </form>
     <!-- Rappid/JointJS dependencies: -->
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/lodash/lodash.js"></script>
@@ -109,64 +111,16 @@
       })();
   </script>
    
-  <div class="center">
-    <div class="form-input">
-      <label for="file-ip-1">Upload Image  </label>
-      <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);"> 
-      <div class="preview">
-        <img id="file-ip-1-preview">
-      </div>
-    </div>
-  </div>
-
-  <div class="carousel-container">
-    <i class="fas fa-arrow-right" id="nextBtn"></i> 
-    <i class="fas fa-arrow-left" id="prevBtn"></i>
-    <div class="carousel-slide">
-      <img src="./" alt=""> /* 원래는 여기에 사진을 넣어야함.*/
-    </div>
-  </div>
-
-  <script src="js/FileSaver.js"></script>
-  <script src="js/html2canvas.js"></script>
-
-  <div id="downloadImage" align="center" style="width: 391px;">
-
-    <img alt="" src="image/background/b1.png">
- 
- </div>
- 
- <div>
- 
-    <button id="save">저장하기</button>
- 
- </div>
-
- <script type="text/javascript">
-
-  $(function(){
   
-     $("#save").click(function() { 
-  
-          html2canvas($("#downloadImage"), {
-  
-              onrendered: function(canvas) {
-  
-                  canvas.toBlob(function(blob) {
-  
-                      saveAs(blob, 'image.png');
-  
-                  });
-  
-              }
-  
-          });
-  
-      });
-  
-  });
-  
-  </script>
+   <script type="text/javascript">
+    function lpimgClick(img,event)
+    {
+        var x = event.clientX / img.width;//按比例获取 
+        $("#txtX").val(x);
+        var y = event.clientY;
+        $("#txtY").val(y);    
+    }
+</script>
 
 </body>
 </html>
