@@ -16,8 +16,8 @@ InteractiveComic
 
 <p align="center">
 <p align="center">
-  <a href="https://github.com/cauoss4/interactiveComic/blob/master/interactivecomic.png/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/cauoss4/interactiveComic/">
+    <img src="interactivecomic.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">"InteractiveComic</h3>
