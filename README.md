@@ -1,4 +1,4 @@
- # ProjectName
+# ProjectName
 
 InteractiveComic
 
@@ -39,11 +39,11 @@ InteractiveComic
  
 ## List
 
-- [How to use?]( Use it in the browser)
+- [How to use?](#Live Web APP (Use it in the browser))
  
-- [File directory description](# File directory description)
-- [Framework used](# Framework used)
-- [License](# License)
+- [File directory description](#File directory description)
+- [Framework used](#Framework used)
+- [License](#License)
 
 
 
@@ -86,9 +86,9 @@ filetree
 
 
 ### Framework used
-- [xxxxxxx](https://getbootstrap.com)
-- [xxxxxxx](https://jquery.com)
-- [xxxxxxx](https://www.jointjs.com)
+
+- [JQUERY](https://jquery.com)
+- [JOINTJS](https://www.jointjs.com)
 
 
 
@@ -125,6 +125,10 @@ filetree
 [license-url]: https://github.com/cauoss4/interactiveComic/LICENSE.txt
 [linkedin-shield]:https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://github.com/cauoss4/interactiveComic
+
+
+
+
 
 
 
