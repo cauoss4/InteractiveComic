@@ -16,6 +16,13 @@
       
     
       </style>
+
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
   </head>
   <body>
      
@@ -112,6 +119,54 @@
     </div>
   </div>
 
+  <div class="carousel-container">
+    <i class="fas fa-arrow-right" id="nextBtn"></i> 
+    <i class="fas fa-arrow-left" id="prevBtn"></i>
+    <div class="carousel-slide">
+      <img src="./" alt=""> /* 원래는 여기에 사진을 넣어야함.*/
+    </div>
+  </div>
+
+  <script src="js/FileSaver.js"></script>
+  <script src="js/html2canvas.js"></script>
+
+  <div id="downloadImage" align="center" style="width: 391px;">
+
+    <img alt="" src="image/background/b1.png">
+ 
+ </div>
+ 
+ <div>
+ 
+    <button id="save">저장하기</button>
+ 
+ </div>
+
+ <script type="text/javascript">
+
+  $(function(){
+  
+     $("#save").click(function() { 
+  
+          html2canvas($("#downloadImage"), {
+  
+              onrendered: function(canvas) {
+  
+                  canvas.toBlob(function(blob) {
+  
+                      saveAs(blob, 'image.png');
+  
+                  });
+  
+              }
+  
+          });
+  
+      });
+  
+  });
+  
+  </script>
 
 </body>
 </html>
