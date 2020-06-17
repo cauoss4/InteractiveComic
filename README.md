@@ -39,10 +39,10 @@ InteractiveComic
  
 ## List
 
-- [How to use?](#Live Web APP (Use it in the browser))
+- [How to use?](#Use)
  
-- [File directory description](#File directory description)
-- [Framework used](#Framework used)
+- [File directory description](#File)
+- [Framework used](#Framework)
 - [License](#License)
 
 
@@ -53,12 +53,13 @@ InteractiveComic
 
 
 
-###### Live Web APP (Use it in the browser)
+## Use
+### Live Web APP (Use it in the browser)
+index.html
 
 
 
-
-### File directory description
+## File 
 
 ```
 filetree 
@@ -85,7 +86,7 @@ filetree
 
 
 
-### Framework used
+## Framework used
 
 - [JQUERY](https://jquery.com)
 - [JOINTJS](https://www.jointjs.com)
@@ -102,7 +103,7 @@ filetree
 
 
 
-### License
+## License
 
 
 
