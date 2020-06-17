@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="">
+    <input name="photo"
+     type="file" accept="image/*"
+      onchange="document.getElementById('image').src = window.URL.createObjectURL(this.files[0])">
+      <button type="button" name="button" onclick="init()">Initialize</button>
+    </div>
+    <img src="" alt="test iam" id="image" onclick="moveClick()">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="./imagemove.js"></script>
+  </body>
+</html>
