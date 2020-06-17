@@ -118,9 +118,9 @@ filetree
 [stars-url]: https://github.com/cauoss4/interactiveComic/stargazers
 [issues-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
 [issues-url]: https://github.com/cauoss4/interactiveComic.svg
-[license-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/cauoss4/interactiveComice.svg?style=flat-square
 [license-url]: https://github.com/cauoss4/interactiveComic/LICENSE.txt
-[linkedin-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-shield]:https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://github.com/cauoss4/interactiveComic
 
 
