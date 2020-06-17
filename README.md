@@ -109,6 +109,19 @@ filetree
 
 <!-- links -->
 
+[your-project-path]:https://github.com/cauoss4/interactiveComic
+[contributors-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
+[contributors-url]: https://github.com/cauoss4/interactiveComic/graphs/contributors
+[forks-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
+[forks-url]: https://github.com/cauoss4/interactiveComic/network/members
+[stars-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
+[stars-url]: https://github.com/cauoss4/interactiveComic/stargazers
+[issues-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
+[issues-url]: https://github.com/cauoss4/interactiveComic.svg
+[license-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
+[license-url]: https://github.com/cauoss4/interactiveComic/LICENSE.txt
+[linkedin-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://github.com/cauoss4/interactiveComic
 
 
 
