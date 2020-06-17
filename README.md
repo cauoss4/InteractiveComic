@@ -29,7 +29,7 @@ InteractiveComic
     ·
     <a href="https://github.com/cauoss4/InteractiveComic/issues">Report bug</a>
     ·
-    <a href="https://github.com/cauoss4/InteractiveComic/issues">提出新特性</a>
+  
   </p>
 
 </p>
@@ -68,15 +68,15 @@ filetree
 ├── SSECURITY.md
 ├── /apps/
 ├── /css/
-├── /dist/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
+├── /build/
 ├── /dist/
 ├── /js/
+├── /build/
 ├── /node_modules/
-├── useless.md
-└── /util/
+├── index.html
+├── placeImage.js
+├── interactivecomic.png
+└──package.json
 
 ```
 
