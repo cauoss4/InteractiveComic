@@ -61,7 +61,7 @@ index.html
     <img src="demo.jpg" alt="Logo" width="919" height="454">
   </a>
 
-
+##[How to watch](https://github.com/cauoss4/interactiveComic/blob/dev/imagemove.html)
 
 ## File 
 
