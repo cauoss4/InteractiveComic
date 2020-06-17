@@ -110,13 +110,13 @@ filetree
 <!-- links -->
 
 [your-project-path]:https://github.com/cauoss4/interactiveComic
-[contributors-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/cauoss4/interactiveComic.svg?style=flat-square
 [contributors-url]: https://github.com/cauoss4/interactiveComic/graphs/contributors
-[forks-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/cauoss4/interactiveComic.svg?style=flat-square
 [forks-url]: https://github.com/cauoss4/interactiveComic/network/members
-[stars-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/cauoss4/interactiveComic.svg?style=flat-square
 [stars-url]: https://github.com/cauoss4/interactiveComic/stargazers
-[issues-shield]: https://github.com/cauoss4/interactiveComic.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/cauoss4/interactiveComic.svg?style=flat-square
 [issues-url]: https://github.com/cauoss4/interactiveComic.svg
 [license-shield]: https://img.shields.io/github/license/cauoss4/interactiveComice.svg?style=flat-square
 [license-url]: https://github.com/cauoss4/interactiveComic/LICENSE.txt
