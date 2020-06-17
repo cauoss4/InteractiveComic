@@ -56,6 +56,10 @@ InteractiveComic
 ## Use
 ### Live Web APP (Use it in the browser)
 index.html
+<p align="center">
+  <a href="https://github.com/cauoss4/interactiveComic/">
+    <img src="demo.jpg" alt="Logo" width="300" height="300">
+  </a>
 
 
 
