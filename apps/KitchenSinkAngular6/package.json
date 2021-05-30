@@ -31,7 +31,7 @@
     "jquery": "3.4.1",
     "lodash": "4.17.11",
     "rxjs": "6.3.3",
-    "ws": "6.1.0",
+    "ws": "7.4.6",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
